@@ -1,4 +1,5 @@
-// Define variables.
+
+    // Define variables.
 const navbar = document.querySelector("nav");
 const submenu = document.querySelector(".submenu");
 const sticky = navbar.offsetTop;
@@ -127,7 +128,7 @@ function getRandomMovie(){
 	let randomResult = Math.floor(Math.random() * (maxResult - minResult +1)) + minResult;
 	
 	// Make an api call for a random movie.
-	axios.get("https://api.themoviedb.org/3/movie/top_rated?api_key="+API_KEY+'&language=en-US&page='+randomPage)
+	axios.get("http://www.omdbapi.com/?i=tt3896198&apikey="+API_KEY+'&language=en-US&page='+randomPage)
 		.then( (response) =>{
 			const movie = response.data.results[randomResult];
 			const output = 
