@@ -200,7 +200,7 @@ function getRandomTvShow(){
 	minResult = Math.ceil(minResult);
 	maxResult = Math.floor(maxResult);
 	let randomResult = Math.floor(Math.random() * (maxResult - minResult +1)) + minResult;
-	axios.get("https://api.themoviedb.org/3/tv/top_rated?api_key="+API_KEY+'&language=en-US&page='+randomPage)
+	axios.get("http://www.omdbapi.com/?i=tt3896198&apikey="+API_KEY+'&language=en-US&page='+randomPage)
 		.then((response)=>{
 			console.log(response);
 			const show = response.data.results[randomResult];
